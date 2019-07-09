@@ -14,8 +14,9 @@ public class Player : MonoBehaviour
 	Rigidbody2D m_rb;
 	BoxCollider2D m_collider;
 	BoxCollider2D m_feet_collider;
+	BoxCollider2D m_ground_collider;
 	PolygonCollider2D m_pickaxe_collider;
-	public CompositeCollider2D m_ground_collider;
+	public CompositeCollider2D m_terrain_collider;
 	public TextController m_text_controller;
 
 	void Start()
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
 		m_rb = GetComponent<Rigidbody2D>();
 		m_collider = GetComponents<BoxCollider2D>()[0];
 		m_feet_collider = GetComponents<BoxCollider2D>()[1];
+		m_ground_collider = GetComponents<BoxCollider2D>()[2];
 		m_transform = GetComponent<Transform>();
 		m_sprite = GetComponent<SpriteRenderer>();
 		m_animator = GetComponent<Animator>();
@@ -76,7 +78,7 @@ public class Player : MonoBehaviour
 	{
 		t_force.x *= m_move_speed;
 
-		if (!m_feet_collider.IsTouching(m_ground_collider))
+		if (!m_ground_collider.IsTouching(m_terrain_collider))
 		{
 			t_force.x *= .5f;
 		}
@@ -85,7 +87,7 @@ public class Player : MonoBehaviour
 
 	public void jump()
 	{
-		if (m_feet_collider.IsTouching(m_ground_collider))
+		if (m_ground_collider.IsTouching(m_terrain_collider))
 		{
 			m_rb.AddForce(new Vector2(0, m_jump_speed));
 		}

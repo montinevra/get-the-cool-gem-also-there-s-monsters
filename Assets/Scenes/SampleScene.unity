@@ -134830,6 +134830,11 @@ PrefabInstance:
       propertyPath: m_text_controller
       value: 
       objectReference: {fileID: 1922040831}
+    - target: {fileID: 3188359846081824835, guid: b905808b0befea648b968d951f434667,
+        type: 3}
+      propertyPath: m_terrain_collider
+      value: 
+      objectReference: {fileID: 470337671}
     - target: {fileID: 3188359846081824833, guid: b905808b0befea648b968d951f434667,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -134884,6 +134889,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188359846081824863, guid: b905808b0befea648b968d951f434667,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745066086881651551, guid: b905808b0befea648b968d951f434667,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b905808b0befea648b968d951f434667, type: 3}
