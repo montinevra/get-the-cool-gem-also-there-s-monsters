@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
 
 		force.x = Input.GetAxis("Horizontal");
 		force.y = 0;
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.Quit();
+		}
 		if (Input.GetAxis("Vertical") > 0 && !m_up_is_pressed)
 		{
 			m_up_is_pressed = true;
